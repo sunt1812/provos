@@ -1,0 +1,50 @@
+
+
+.posts {
+    &__images {
+        overflow: hidden;
+        height: 250px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all .3s ease;
+        }
+        &:hover img{
+            transform: scale(1.1);
+        }
+    }
+    &__title {
+        font-size: 2.3rem;
+        font-weight: 600;
+        color: var(--black);
+        margin: 3rem 0 1.5rem;
+        @include tablet {
+            font-size: 1.8rem;
+        }
+    }
+    &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5;
+        font-size: 1.5rem;
+    }
+    hr {
+        background-color: var(--three-color);
+        width: 100%;
+        height: 3px;
+        margin: 2rem 0;
+    }
+    &__cta {
+       @include flex(center,space-between);
+    }
+    &__date {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        @include tablet {
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+
+.form {
+    background-color: var(--white);
+    margin: auto;
+    width: 80rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px rgba(70, 69, 69, 0.2);
+    border-bottom: 4px solid var(--orange);
+    padding: 4rem;
+    @include tablet {
+        width: 70rem;
+    }
+    @include mobile {
+        width: 100%;
+    }
+    &__item {
+        margin-bottom: 3rem;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 2rem;
+        }
+    }
+    &__group {
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: none;
+            background-color: var(--light-dark);
+        }
+        textarea {
+            height: 10rem;
+            resize: unset;
+        }
+        input:focus {
+            outline: 2px solid var(--three-color);
+        }
+        label {
+            display: block;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+            display: flex;
+            small {
+                font-size: 1rem;
+            }
+        }
+        &-fomat {
+            text-align: right;
+            margin-top: 0.6rem;
+        }
+    }
+    &-checked {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        @include mobile {
+            margin-top: 0.5rem;
+            justify-content: space-between;
+        }
+        input {
+            width: unset;
+            margin-right: 1rem;
+        }
+        input:focus {
+            outline: unset;
+            background-color: var(--white);
+        }
+    }
+}

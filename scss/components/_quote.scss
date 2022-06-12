@@ -1,0 +1,51 @@
+
+.quote {
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--second-bg);
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    position: relative;
+    height: fit-content;
+    margin-bottom: 3rem;
+    &__icon {
+        position: absolute;
+        top: 3.5rem;
+        left: 3rem;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        span {
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 1.6rem;
+            position: relative;
+            margin-left: 2rem;
+            padding-left: 2rem;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(-50%);
+                width: 2rem;
+                height: 2px;
+                background-color: var(--txt-main-color);
+            }
+        }
+    }
+    &__start {
+        font-size: 2rem;
+        color: var(--orange);
+    }
+}

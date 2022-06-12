@@ -1,0 +1,37 @@
+
+.doctor {
+    display: flex;
+    gap: 4rem;
+    @include mobile {
+        flex-direction: column;
+    }
+    &__left {
+        width: 50%;
+        position: relative;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    &__info {
+        width: 50%;
+        color: var(--white);
+        @include mobile {
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+    }
+    &__images {
+        @include mobile {
+            text-align: center;
+            img {
+                width: 80%;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+}

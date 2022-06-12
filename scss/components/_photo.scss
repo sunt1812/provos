@@ -1,0 +1,36 @@
+
+.photo {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    &__img {
+        transition: all .3s ease;
+        height: 100%;
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    &__title {
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: var(--white);
+        @include tablet {
+            font-size: 1.3rem;
+        }
+    }
+    &__desc {
+        font-size: 2.4rem;
+        font-family: var(--font-dancing);
+        margin-top: 0.5rem;
+        color: var(--white);
+        @include tablet {
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.slide {
+    margin-top: 2rem;
+   width: 100%;
+   position: relative;
+   &__wrapper {
+       width: 100%;
+       overflow:hidden;
+       scroll-behavior: smooth;
+   }
+   &__main {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+   }
+   &__item {
+        min-width: 20%;
+        height: 100%;
+        transition: all .3s ease;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        @include mobile {
+            min-width: 100%;
+        }
+   }
+   .next {
+       position: absolute;
+       right: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+   }
+   .prev {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+}
+}

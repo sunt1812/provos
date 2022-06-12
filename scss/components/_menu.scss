@@ -1,0 +1,113 @@
+.menu {
+    @include mobile {
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        background: var(--pink);
+        width: 100%;
+        z-index: 9999;
+        padding: 2rem 0;
+        margin: unset;
+        transition: all .5s ease;
+        &.show-menu-mb {
+            top: 0%;
+        }
+    }
+    &__list {
+        @include flex(center,space-between);
+        @include mobile {
+            padding-top: 5rem;
+            flex-direction: column;
+        }
+    }
+    &__item {
+       padding: 1.3rem 0;
+       @include tablet {
+           padding: 1rem 0;
+       }
+
+    }
+    &__link {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 500;
+        &.active {
+            color: var(--three-color);
+        }
+        @include tablet {
+            font-size: 1.2rem;
+        }
+        span {
+            color: var(--orange);
+        }
+    }
+}
+.menu-mb {
+    display: none;
+    @include mobile {
+        display: block;
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999999;
+        &__block {
+            @include flex(center,space-between);
+            height: 5rem;
+            background-color: var(--white);
+            padding: 1rem;
+        }
+        &__logo {
+            width: 7rem;
+        }
+        &__calendar {
+            font-size: 2rem;
+            color: var(--three-color);
+        }
+        &__bars {
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--three-color);
+            width: 2rem;
+            height: 2rem;
+        }
+        &__close {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--three-color);
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+// nav bottom 
+
+.nav-bottom {
+    display: none;
+    @include mobile {
+        display: block;
+        &__item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            height: 4rem;
+            span {
+                display: inline-block;
+                background-color: var(--orange);
+                color: var(--white);
+                line-height: 4rem;
+                text-align: center;
+            }
+            i {
+                width: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                background-color: var(--main-bg);
+                color: var(--white);
+            }
+        }
+   }
+}

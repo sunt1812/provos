@@ -1,0 +1,28 @@
+.u-center-text{
+    text-align: center ; 
+    width: 70% ;
+    margin: 0 auto 4rem;
+    @include mobile {
+        width: 94% ;
+        margin: 0 auto 3rem;
+    }
+}
+.u-center-text-mb{
+    @include mobile {
+        text-align: center ; 
+    }
+}
+.u-center-width {
+    text-align: center;
+}
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 3rem !important;
+}
+.u-mt {
+    margin-top: 3rem;
+}
+

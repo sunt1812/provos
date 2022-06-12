@@ -1,0 +1,63 @@
+
+.financial {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 8rem;
+    @include mobile {
+        grid-template-columns: 100%;
+        margin-bottom: 4rem;
+    }
+    &__title {
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+    }
+    &__left:first-child {
+        padding-right: 4rem;
+        @include mobile {
+            padding: unset;
+        }
+    }
+    &__left:last-child {
+        padding-left: 4rem;
+        @include mobile {
+            padding: unset;
+        }
+    }
+    &__right {
+        img {
+            height: 100%;
+        }
+    }
+    &-box {
+        background-color: var(--light-dark);
+        padding: 2rem;
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--second-color);
+            border-bottom: 3px solid var(--orange);
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        &__desc {
+           &:not(:last-child) {
+               margin-bottom: 1rem;
+           }
+            small {
+                color: rgb(196, 37, 37);
+                font-size: 1.6rem;
+            }
+            span {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

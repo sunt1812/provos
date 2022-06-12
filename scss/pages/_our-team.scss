@@ -1,0 +1,42 @@
+// =========  section our-doctors ==========
+
+.our-doctors {
+    &__content {
+        margin-top: 5rem;
+    }
+    .doctor:not(:last-child) {
+        margin-bottom: 8rem;
+        @include mobile {
+            margin-bottom: unset;
+        }
+    }
+    .doctor:nth-child(even) {
+        .doctor__left {
+            order: 2;
+            @include mobile {
+                order: unset;
+            }
+        }
+    }
+}
+
+// ========= end section our-doctors ==========
+// =========  section pediatric ==========
+
+.pediatric {
+    background-color: var(--second-bg);
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+        @include mobile {
+           grid-template-columns: repeat(2,1fr );
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// ========= end section pediatric ==========

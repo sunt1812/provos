@@ -1,0 +1,44 @@
+
+.bite {
+    display: grid;
+    grid-template-columns: repeat(2,1fr );
+    @include mobile {
+        grid-template-columns: 100%;
+        margin-bottom: 4rem;
+    }
+    &:nth-child(even) > .bite__images {
+        order: 2;
+        @include mobile {
+            order: unset;
+        }
+    }
+    &:nth-child(odd) > .bite__info {
+        padding-left: 5rem;
+        @include mobile {
+            padding: unset;
+        }
+    }
+    &:nth-child(even) > .bite__info {
+        padding-right: 5rem;
+        @include mobile {
+            padding: unset;
+        }
+    }
+    &__images img {
+        width: 100%;
+        height: 100%;
+    }
+    &__title {
+        margin-top: 4rem;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+        color: var(--second-color);
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+    }
+}

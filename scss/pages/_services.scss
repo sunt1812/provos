@@ -1,0 +1,40 @@
+// =========  section dental ==========
+
+.dental {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        margin-top: 7rem;
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 6rem;
+        }
+    }
+}
+
+// ========= end section dental ==========
+// =========  section bites ==========
+
+.bites {
+    padding-bottom: 8rem;
+    @include tablet {
+        padding-bottom: 6rem;
+    }
+    @include mobile {
+        padding-bottom: 4rem;
+    }
+    &-item:nth-child(odd) > &-info {
+        padding: 3rem;
+        padding-left: 5rem;
+    }
+    &-item:nth-child(even) > &-info {
+        padding: 3rem;
+        padding-left: unset;
+    }
+    &-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+// ========= end section bites ==========

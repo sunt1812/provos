@@ -1,0 +1,67 @@
+// abstracts
+@import './abstracts/variable';
+@import './abstracts/mixins';
+
+
+// base
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+// components
+@import './components/button';
+@import './components/menu';
+@import './components/hero';
+@import './components/contact-bg';
+@import './components/dropdown';
+@import './components/dost';
+@import './components/map';
+// components home
+@import './components/welcome-images';
+@import './components/team-reviews';
+@import './components/tabs';
+@import './components/photo';
+@import './components/doctor';
+@import './components/testimonials';
+@import './components/posts';
+@import './components/slide';
+// components about
+@import './components/dentist-card';
+@import './components/technology';
+// components services
+@import './components/dental-card';
+@import './components/bite';
+// components patient info
+@import './components/patient-card';
+// components financial
+@import './components/financial';
+// components reviews
+@import './components/socials-reviews';
+@import './components/reviews-form';
+@import './components/quote';
+@import './components/patient-photo';
+// components payments
+@import './components/form';
+// components locations
+@import './components/location';
+
+
+// layout 
+@import './layout/header';
+@import './layout/footer';
+@import './layout/grid';
+@import './layout/section';
+// pages 
+@import './pages/home';
+@import './pages/about';
+@import './pages/our-team';
+@import './pages/services';
+@import './pages/patient-info';
+@import './pages/financials';
+@import './pages/reviews';
+@import './pages/payments';
+@import './pages/locations';
+@import './pages/contact-us';
+
+
+// sass scss/index.scss css/style.css --watch

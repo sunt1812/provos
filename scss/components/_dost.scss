@@ -1,0 +1,23 @@
+.dots {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    cursor: pointer;
+    @include mobile {
+        right: 0%;
+        left: 41%;
+        bottom: 0;
+        transform: translateY(-50%);
+    }
+    &__item {
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: var(--three-color);
+        margin: 0rem .5rem;
+        border-radius: 4px;
+    }
+    .active {
+        background-color: var(--white);
+    }
+}

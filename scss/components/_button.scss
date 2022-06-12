@@ -1,0 +1,70 @@
+.button {
+    &--mt {
+        margin-top: 3rem;
+    }
+    &--center {
+        text-align: center;
+    }
+    &--mb {
+        margin-bottom: 1rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.4rem;
+    background-color:transparent;
+    color: var(--white);
+    padding: 1.2rem 2.1rem ;
+    text-transform: uppercase;
+    border-radius: 999px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    min-width: 20rem;
+    @include tablet {
+        padding: 1rem 1.8rem;
+        font-size: 1.2rem;
+        min-width: 12rem;
+    }
+    @include mobile {
+        font-size: 1.2rem;
+        min-width: 9rem;
+    }
+    &--primary {
+        background-color: var(--primary-color);
+    }
+    &--second {
+        background-color: var(--orange);
+    }
+    &--size-l {
+        padding: 1.5rem 3rem;
+        font-weight: 500;
+        @include tablet {
+            padding: 1.4rem 3rem;
+        }
+    }
+    & + .btn {
+        margin-left: 2rem;
+        @include tablet {
+            margin-left: 1rem;
+        }
+        @include mobile {
+            margin-left: unset;
+            margin-top: 1rem;
+        }
+    }
+}
+.btn-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--five-color);
+    display: block;
+    cursor: pointer;
+    text-transform: capitalize;
+    &--secondary {
+        color: var(--three-color);
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}

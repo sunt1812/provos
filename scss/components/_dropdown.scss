@@ -1,0 +1,89 @@
+.dropdown {
+    position: relative;
+    &--show > &-content {
+        display: block;
+    }
+    &-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 67rem;
+        background-color: var(--light-dark);
+        z-index: 11;
+        padding: 2rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: none;
+        @include tablet {
+            width: 44rem;
+        }
+        @include mobile {
+            position: fixed;
+            top: 5rem;
+            left: 0;
+            right: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--pink);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -1%;
+            left: 0;
+            width: 10rem;
+            height: 4px;
+            background-color:var(--orange);
+        }
+        &.show {
+            display: block;
+        }
+        &__title {
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            display: inline-block;
+            position: relative;
+            i {
+                display: none;
+            }
+            @include mobile {
+                text-align: center;
+                width: 100%;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                i {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 1.8rem;
+                }
+            }
+
+        }
+        &__box {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2rem;
+            @include mobile {
+                grid-template-columns: 100%;
+                place-items: center;
+                text-align: center;
+                gap:0;
+            }
+        }
+    }
+    &-list {
+        &__link {
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            @include tablet {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

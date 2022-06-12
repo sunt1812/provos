@@ -1,0 +1,42 @@
+.technology {
+    display: grid;
+    gap: 4rem;
+    margin-top: 3rem;
+    place-items: center;
+    @include mobile {
+        grid-template-columns: 100% !important;
+    }
+    &:nth-child(odd) {
+        grid-template-columns: 40% 60%;
+    }
+    &:nth-child(even) {
+        grid-template-columns: 60% 40%;
+    }
+    &:nth-child(even) > &__images{
+        order: 2;
+        @include mobile {
+            order: unset;
+        }
+    }
+    &__images:nth-child(odd) {
+        text-align: right;
+    }
+    &__images:nth-child(even) {
+        text-align:left;
+    }
+    &__images {
+        @include mobile {
+            width: 80%;
+        }
+    }
+    &__title {
+        font-size: 3rem;
+        color: var(--three-color);
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        @include mobile {
+            font-size: 2.4rem;
+        }
+    }
+}

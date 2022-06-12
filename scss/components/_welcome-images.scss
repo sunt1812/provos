@@ -1,0 +1,20 @@
+
+.welcome-images {
+    position: relative;
+    max-width: 89rem;
+    z-index: 11;
+    margin: 3rem auto 1.8rem;
+    background-color: var(--white);
+    @include tablet {
+        max-width: 65rem;
+    }
+    &__icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    &__img {
+        padding: 0.2rem .4rem;
+    }
+}

@@ -1,0 +1,24 @@
+
+.patient-card {
+    background-color:var(--light-dark);
+    padding: 0rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    padding-bottom: 4rem;
+    &__icon {
+        width: 8rem;
+        margin-top: -4rem;
+        margin-bottom: 2rem;
+    }
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+}

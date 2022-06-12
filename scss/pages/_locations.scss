@@ -1,0 +1,10 @@
+// =========== section locations ============
+
+.locations {
+    background-color: var(--three-bg);
+    @include mobile {
+        padding-top: 8rem;
+    }
+}
+
+// =========== end section locations ============

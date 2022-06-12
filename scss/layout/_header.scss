@@ -1,0 +1,101 @@
+.header {
+    .navbar {
+        background-color: var(--main-bg);
+        height: var(--header-height);
+        @include mobile {
+            display: none;
+        }
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            align-items: center;
+            line-height: 100%;
+            height: var(--header-height);
+            color: var(--white);
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        &__desc {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1.4rem;
+            @include tablet {
+                font-size: 1.2rem;
+            }
+            span {
+                font-weight: 300;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .nav-main {
+        @include mobile {
+            display: none;
+        }
+        &__block {
+            @include flex(center,space-between);
+            margin-top: 1.5rem;
+        }
+        &__list {
+            width: 27%;
+            @include flex(center,"");
+            @include tablet {
+                flex:1;
+            }
+        }
+        &__item {
+            font-size: 1.5rem;
+            padding-bottom: 0.1rem;
+            position: relative;
+            border-bottom: 1px solid var(--txt-main-color);
+            font-weight: 400;
+            @include tablet {
+                font-size: 1.2rem;
+            }
+        }
+        &__item:first-child {
+            margin-right: 2rem;
+            @include tablet {
+                margin-right: 1rem;
+            }
+        }
+        &__logo {
+            flex: 1;
+            text-align: center;
+            @include tablet {
+               img {
+                width: 13rem;
+               }
+            }
+        }
+        &__info {
+            @include flex(center,flex-end);
+        }
+        &__phone {
+            color: var(--primary-color);
+            display: block;
+            text-align: center;
+            margin-right: 2rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            @include tablet {
+                font-size: 1.1rem;
+                margin-right: 1rem;
+            }
+            span {
+                color: var(--primary-color);
+                display: block;
+                font-size: 1.8rem;
+                font-weight: 600;
+                @include tablet {
+                    font-size: 1.3rem;
+                }
+            }
+        }     
+    }
+}
+/* start header__top */

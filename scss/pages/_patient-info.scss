@@ -1,0 +1,43 @@
+// =========  section patient-info ==========
+
+.patient-info {
+    position: relative;
+    &::before {
+        content: "";
+        background: url('../../images/cricle-bg/Ellipse\ 108.png') no-repeat;
+        position: absolute;
+        left: -20%;
+        top: -30%;
+        width: 70%;
+        height: 60%;
+        z-index: -1;
+        @include mobile {
+            display: none;
+        }
+    }
+    &::after {
+        content: "";
+        background: url('../../images/cricle-bg/Ellipse\ 362.png') no-repeat;
+        position: absolute;
+        right: -13rem;
+        top: 30%;
+        width: 22rem;
+        height: 60%;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__content {
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 5rem;
+        }
+    }
+}
+
+// ========= end section patient-info ==========
